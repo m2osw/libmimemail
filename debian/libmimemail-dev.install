@@ -1,0 +1,3 @@
+usr/include/libmimemail
+usr/lib/libmimemail.so
+usr/share/cmake/LibMimeMail/*

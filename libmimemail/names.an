@@ -1,0 +1,22 @@
+# Names for the LibMimeMail Package
+
+introducer=name
+project=libmimemail
+
+[public]
+email_from="From"
+email_to="To"
+email_priority_bulk="Bulk"
+email_priority_low="Low"
+email_priority_normal="Normal"
+email_priority_high="High"
+email_priority_urgent="Urgent"
+email_x_priority="X-Priority"
+email_x_msmail_priority="X-MSMail-Priority"
+email_importance="Importance"
+email_precedence="Precedence"
+email_subject="Subject"
+email_mime_version="MIME-Version"
+email_date="Date"
+
+# vim: syntax=dosini

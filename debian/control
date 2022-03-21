@@ -1,0 +1,43 @@
+Source: libmimemail
+Priority: extra
+Maintainer: Alexis Wilke <alexis@m2osw.com>
+Build-Depends: cmake,
+    debhelper,
+    doxygen,
+    graphviz,
+    snapcatch2 (>= 2.9.1.0~bionic),
+    snapcmakemodules (>= 1.0.49.0~bionic),
+    snapdev (>= 1.1.3.0~bionic),
+    snaplogger-dev (>= 1.0.0.0~bionic)
+Standards-Version: 3.9.4
+Section: utils
+Homepage: https://snapwebsites.org/
+Vcs-Git: https://github.com/m2osw/snapcpp.git
+Vcs-Browser: https://github.com/m2osw/libmimemail
+
+Package: libmimemail-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: Documentation for the C++ libmimemail project library.
+ This package includes documentation for the C++ libmimemail library funtions.
+
+Package: libmimemail
+Section: libs
+Architecture: any
+Suggests: libmimemail-doc
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Development package for the C++ libmimemail project.
+ This library provides a way to send MIME emails from your C++ software.
+
+Package: libmimemail-dev
+Section: libdevel
+Architecture: any
+Depends: libmimemail (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Development package for the C++ libmimemail project.
+ This package handles MIME emails (i.e. emails with plain text, HTML,
+ the HTML elements such as pictures and CSS, and email attachments).
+ It offers you a few objects you can use to quickly create valid multipart
+ emails in C++.
+
+# vim: ts=4 sw=4 et
