@@ -36,12 +36,16 @@ add_library(${PROJECT_NAME} SHARED
 
 target_include_directories(${PROJECT_NAME}
     PUBLIC
-        ${SNAPLOGGER_INCLUDE_DIR}
-        ${SNAPDEV_INCLUDE_DIR}
+        ${EDHTTP_INCLUDE_DIRS}
+        ${LIBTLD_INCLUDE_DIRS}
+        ${SNAPDEV_INCLUDE_DIRS}
+        ${SNAPLOGGER_INCLUDE_DIRS}
 )
 
 target_link_libraries(${PROJECT_NAME}
     PUBLIC
+        ${EDHTTP_LIBRARIES}
+        ${LIBTLD_LIBRARIES}
         ${SNAPLOGGER_LIBRARIES}
 )
 
