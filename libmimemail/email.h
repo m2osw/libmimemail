@@ -21,8 +21,8 @@
 
 // self
 //
-#include    "libmimemail/attachment.h"
-#include    "libmimemail/exception.h"
+#include    <libmimemail/attachment.h>
+#include    <libmimemail/exception.h>
 
 
 // snapdev

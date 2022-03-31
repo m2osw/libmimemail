@@ -19,9 +19,9 @@
 
 // self
 //
-#include    "attachment.h"
+#include    "libmimemail/attachment.h"
 
-#include    "exception.h"
+#include    "libmimemail/exception.h"
 
 
 // edhttp
@@ -38,14 +38,14 @@
 #include    <snapdev/pathinfo.h>
 
 
-// snaplogger lib
+// snaplogger
 //
 #include    <snaplogger/message.h>
 
 
 // last include
 //
-#include <snapdev/poison.h>
+#include    <snapdev/poison.h>
 
 
 

@@ -18,10 +18,10 @@
 
 // self
 //
-#include    "email.h"
+#include    "libmimemail/email.h"
 
-#include    "names.h"
-#include    "version.h"
+#include    "libmimemail/names.h"
+#include    "libmimemail/version.h"
 
 
 // edhttp
@@ -45,14 +45,14 @@
 #include    <snaplogger/message.h>
 
 
-// libtld lib
+// libtld
 //
-#include <libtld/tld.h>
+#include    <libtld/tld.h>
 
 
 // last include
 //
-#include <snapdev/poison.h>
+#include    <snapdev/poison.h>
 
 
 
