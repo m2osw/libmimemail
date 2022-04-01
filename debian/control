@@ -1,8 +1,10 @@
 Source: libmimemail
 Priority: extra
 Maintainer: Alexis Wilke <alexis@m2osw.com>
-Build-Depends: brs (>= 1.0.0.0~bionic),
+Build-Depends: advgetopt-dev (>= 2.0.35.0~bionic),
+    brs-dev (>= 1.0.0.0~bionic),
     cmake,
+    cppprocess (>= 1.1.51.0~bionic),
     debhelper,
     doxygen,
     edhttp (>= 0.1.0.0~bionic),
