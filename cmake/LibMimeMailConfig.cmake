@@ -1,6 +1,4 @@
-# - Try to find LibMimeMail
-#
-# Once done this will define
+# - Find LibMimeMail
 #
 # LIBMIMEMAIL_FOUND        - System has LibMimeMail
 # LIBMIMEMAIL_INCLUDE_DIRS - The LibMimeMail include directories
@@ -28,11 +26,11 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 find_path(
-    SITTER_INCLUDE_DIR
+    LIBMIMEMAIL_INCLUDE_DIR
         libmimemail/version.h
 
     PATHS
-        $ENV{LIBMIMEMAIL_INCLUDE_DIR}
+        ENV LIBMIMEMAIL_INCLUDE_DIR
 )
 
 find_library(
@@ -40,7 +38,8 @@ find_library(
         mimemail
 
     PATHS
-        $ENV{LIBMIMEMAIL_LIBRARY}
+        ${LIBMIMEMAIL_LIBRARY_DIR}
+        ENV LIBMIMEMAIL_LIBRARY
 )
 
 mark_as_advanced(
@@ -52,14 +51,11 @@ set(LIBMIMEMAIL_INCLUDE_DIRS ${LIBMIMEMAIL_INCLUDE_DIR})
 set(LIBMIMEMAIL_LIBRARIES    ${LIBMIMEMAIL_LIBRARY})
 
 include(FindPackageHandleStandardArgs)
-
-# handle the QUIETLY and REQUIRED arguments and set SITTER_FOUND to
-# TRUE if all listed variables are TRUE
 find_package_handle_standard_args(
     Sitter
-    DEFAULT_MSG
-    LIBMIMEMAIL_INCLUDE_DIR
-    LIBMIMEMAIL_LIBRARY
+    REQUIRED_VARS
+        LIBMIMEMAIL_INCLUDE_DIR
+        LIBMIMEMAIL_LIBRARY
 )
 
 # vim: ts=4 sw=4 et
