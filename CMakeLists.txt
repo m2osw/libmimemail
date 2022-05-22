@@ -21,7 +21,6 @@ cmake_minimum_required(VERSION 3.10.2)
 project(libmimemail_project)
 
 find_package(AtomicNames      REQUIRED)
-find_package(BRS              REQUIRED)
 find_package(CppProcess       REQUIRED)
 find_package(EdHttp           REQUIRED)
 find_package(LibExcept        REQUIRED)

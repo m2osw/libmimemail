@@ -988,9 +988,9 @@ const email::parameter_map_t & email::get_all_parameters() const
  *
  * \sa serialize()
  */
-void email::deserialize(brs::deserializer<std::stringstream> & in)
+void email::deserialize(snapdev::deserializer<std::stringstream> & in)
 {
-    brs::deserializer<std::stringstream>::process_hunk_t func(std::bind(
+    snapdev::deserializer<std::stringstream>::process_hunk_t func(std::bind(
                   &email::process_hunk
                 , this
                 , std::placeholders::_1
@@ -1014,8 +1014,8 @@ void email::deserialize(brs::deserializer<std::stringstream> & in)
  * \param[in] r  The reader used to read the input data.
  */
 bool email::process_hunk(
-      brs::deserializer<std::stringstream> & in
-    , brs::field_t const & field)
+      snapdev::deserializer<std::stringstream> & in
+    , snapdev::field_t const & field)
 {
     switch(field.f_name[0])
     {
@@ -1099,7 +1099,7 @@ bool email::process_hunk(
  *
  * \sa deserialize()
  */
-void email::serialize(brs::serializer<std::stringstream> & out) const
+void email::serialize(snapdev::serializer<std::stringstream> & out) const
 {
     std::string const version(
                   std::to_string(EMAIL_MAJOR_VERSION)
@@ -1123,7 +1123,7 @@ void email::serialize(brs::serializer<std::stringstream> & out) const
 
     for(auto const & it : f_attachments)
     {
-        brs::recursive sub_field(out, "attachment");
+        snapdev::recursive sub_field(out, "attachment");
         it.serialize(out);
     }
 

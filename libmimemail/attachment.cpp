@@ -576,11 +576,11 @@ attachment & attachment::get_related(int index) const
  *
  * \sa serialize()
  */
-void attachment::deserialize(brs::deserializer<std::stringstream> & in, bool is_sub_attachment)
+void attachment::deserialize(snapdev::deserializer<std::stringstream> & in, bool is_sub_attachment)
 {
     f_is_sub_attachment = is_sub_attachment;
 
-    brs::deserializer<std::stringstream>::process_hunk_t func(std::bind(
+    snapdev::deserializer<std::stringstream>::process_hunk_t func(std::bind(
                   &attachment::process_hunk
                 , this
                 , std::placeholders::_1
@@ -595,8 +595,8 @@ void attachment::deserialize(brs::deserializer<std::stringstream> & in, bool is_
 
 
 bool attachment::process_hunk(
-      brs::deserializer<std::stringstream> & in
-    , brs::field_t const & field)
+      snapdev::deserializer<std::stringstream> & in
+    , snapdev::field_t const & field)
 {
     if(field.f_name == "header")
     {
@@ -634,7 +634,7 @@ bool attachment::process_hunk(
  *
  * \param[in,out] w  The writer where the data gets saved.
  */
-void attachment::serialize(brs::serializer<std::stringstream> & out) const
+void attachment::serialize(snapdev::serializer<std::stringstream> & out) const
 {
     for(auto const & it : f_headers)
     {
@@ -642,7 +642,7 @@ void attachment::serialize(brs::serializer<std::stringstream> & out) const
     }
     for(auto const & it : f_sub_attachments)
     {
-        brs::recursive sub_field(out, "attachment");
+        snapdev::recursive sub_field(out, "attachment");
         it.serialize(out);
     }
 

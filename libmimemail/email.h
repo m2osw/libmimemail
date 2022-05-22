@@ -109,8 +109,8 @@ public:
 
     // functions used to save the data serialized (used by the sendmail plugin)
     //
-    void                    serialize(brs::serializer<std::stringstream> & out) const;
-    void                    deserialize(brs::deserializer<std::stringstream> & in);
+    void                    serialize(snapdev::serializer<std::stringstream> & out) const;
+    void                    deserialize(snapdev::deserializer<std::stringstream> & in);
 
     bool                    send() const;
 
@@ -118,8 +118,8 @@ public:
 
 private:
     bool                    process_hunk(
-                                  brs::deserializer<std::stringstream> & in
-                                , brs::field_t const & field);
+                                  snapdev::deserializer<std::stringstream> & in
+                                , snapdev::field_t const & field);
 
     bool                    f_branding = true;
     std::string             f_cumulative = std::string();

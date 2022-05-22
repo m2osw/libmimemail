@@ -19,11 +19,6 @@
 // Snap Websites Servers -- create a feed where you can write an email
 #pragma once
 
-// brs
-//
-#include    <brs/brs.h>
-
-
 // edhttp
 //
 #include    <edhttp/quoted_printable.h>
@@ -31,6 +26,7 @@
 
 // snapdev
 //
+#include    <snapdev/brs.h>
 #include    <snapdev/case_insensitive_string.h>
 
 
@@ -85,15 +81,15 @@ public:
 
     // "internal" functions used to save/restore the data in/from a buffer
     //
-    void                    serialize(brs::serializer<std::stringstream> & out) const;
-    void                    deserialize(brs::deserializer<std::stringstream> & in, bool is_sub_attachment);
+    void                    serialize(snapdev::serializer<std::stringstream> & out) const;
+    void                    deserialize(snapdev::deserializer<std::stringstream> & in, bool is_sub_attachment);
 
     bool                    operator == (attachment const & rhs) const;
 
 private:
     bool                    process_hunk(
-                                  brs::deserializer<std::stringstream> & in
-                                , brs::field_t const & field);
+                                  snapdev::deserializer<std::stringstream> & in
+                                , snapdev::field_t const & field);
 
     header_map_t            f_headers = header_map_t();
     std::string             f_data = std::string();
