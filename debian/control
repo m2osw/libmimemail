@@ -2,7 +2,7 @@ Source: libmimemail
 Priority: extra
 Maintainer: Alexis Wilke <alexis@m2osw.com>
 Build-Depends: cmake,
-    cppprocess (>= 1.1.51.0~bionic),
+    cppprocess-dev (>= 1.1.51.0~bionic),
     debhelper,
     doxygen,
     edhttp (>= 0.1.0.0~bionic),
