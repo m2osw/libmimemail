@@ -22,6 +22,7 @@ project(libmimemail_project)
 
 find_package(AtomicNames      REQUIRED)
 find_package(CppProcess       REQUIRED)
+find_package(CppThread        REQUIRED)
 find_package(EdHttp           REQUIRED)
 find_package(LibExcept        REQUIRED)
 find_package(LibTLD           REQUIRED)
