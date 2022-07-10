@@ -1,7 +1,6 @@
-# sitter -- a tool used to verify service availabilities
 # Copyright (c) 2018-2022  Made to Order Software Corp.  All Rights Reserved
 #
-# https://snapwebsites.org/project/sitter
+# https://snapwebsites.org/project/libmimemail
 # contact@m2osw.com
 #
 # This program is free software: you can redistribute it and/or modify
