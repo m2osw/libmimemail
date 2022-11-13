@@ -1,3 +1,9 @@
+libmimemail (1.0.0.2~bionic) bionic; urgency=high
+
+  * Bumped build version to rebuild on Launchpad.
+
+ -- Alexis Wilke <alexis@m2osw.com>  Sat, 12 Nov 2022 17:53:24 -0800
+
 libmimemail (1.0.0.1~bionic) bionic; urgency=high
 
   * Bump version to rebuild.
