@@ -1,5 +1,11 @@
 libmimemail (1.0.0.2~jammy) jammy; urgency=high
 
+  * Bumped debian/compat to 15.
+
+ -- Alexis Wilke <alexis@m2osw.com>  Sun, 12 Nov 2023 10:54:45 -0800
+
+libmimemail (1.0.0.2~jammy) jammy; urgency=high
+
   * Bumped build version to rebuild on Launchpad.
 
  -- Alexis Wilke <alexis@m2osw.com>  Sat, 12 Nov 2022 17:53:24 -0800
