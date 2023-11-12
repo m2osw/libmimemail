@@ -1,4 +1,4 @@
-libmimemail (1.0.0.2~jammy) jammy; urgency=high
+libmimemail (1.0.0.3~jammy) jammy; urgency=high
 
   * Bumped debian/compat to 15.
 
