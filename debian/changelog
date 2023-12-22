@@ -1,3 +1,9 @@
+libmimemail (1.0.0.4~bionic) bionic; urgency=high
+
+  * Bumped build version to rebuild on Launchpad.
+
+ -- Alexis Wilke <alexis@m2osw.com>  Thu, 21 Dec 2023 21:29:27 -0800
+
 libmimemail (1.0.0.3~jammy) jammy; urgency=high
 
   * Bumped debian/compat to 15.
