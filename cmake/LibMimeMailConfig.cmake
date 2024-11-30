@@ -52,7 +52,7 @@ set(LIBMIMEMAIL_LIBRARIES    ${LIBMIMEMAIL_LIBRARY})
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(
-    Sitter
+    LibMimeMail
     REQUIRED_VARS
         LIBMIMEMAIL_INCLUDE_DIR
         LIBMIMEMAIL_LIBRARY
