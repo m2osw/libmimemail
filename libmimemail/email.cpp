@@ -33,14 +33,14 @@
 #include    <edhttp/weighted_http_string.h>
 
 
-// eventdispatcher lib
+// eventdispatcher
 //
 #include    <cppprocess/io_capture_pipe.h>
 #include    <cppprocess/io_data_pipe.h>
 #include    <cppprocess/process.h>
 
 
-// snaplogger lib
+// snaplogger
 //
 #include    <snaplogger/message.h>
 
@@ -1632,5 +1632,6 @@ bool email::operator == (email const & rhs) const
 }
 
 
-} // namespace libmimemail
+}
+// namespace libmimemail
 // vim: ts=4 sw=4 et
