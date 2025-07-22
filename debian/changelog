@@ -1,4 +1,4 @@
-libmimemail (1.0.1.0~bionic) bionic; urgency=high
+libmimemail (1.0.1.0~noble) noble; urgency=high
 
   * Fixed the name of the package to find in cmake file.
   * Moved the debian/compat version to debian/control dependencies.
