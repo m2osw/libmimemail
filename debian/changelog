@@ -1,3 +1,10 @@
+libmimemail (1.0.1.0~bionic) bionic; urgency=high
+
+  * Fixed the name of the package to find in cmake file.
+  * Moved the debian/compat version to debian/control dependencies.
+
+ -- Alexis Wilke <alexis@m2osw.com>  Mon, 21 Jul 2025 19:01:01 -0700
+
 libmimemail (1.0.0.4~bionic) bionic; urgency=high
 
   * Bumped build version to rebuild on Launchpad.
