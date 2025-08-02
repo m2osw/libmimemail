@@ -323,7 +323,7 @@ void attachment::set_content_disposition(
  * Each specific attachment can be given a set of headers that are saved
  * at the beginning of that part in a multi-part email.
  *
- * This function is used to know whther a given header was already
+ * This function is used to know whether a given header was already
  * defined or not.
  *
  * \note
@@ -331,7 +331,8 @@ void attachment::set_content_disposition(
  * is the empty string.
  *
  * \param[in] name  A valid header name.
- * \param[in] value  The value of this header.
+ *
+ * \return true if the named header is defined.
  *
  * \sa set_data()
  */
@@ -566,13 +567,16 @@ attachment & attachment::get_related(int index) const
 }
 
 
-/** \brief Unserialize an email attachment.
+/** \brief Deserialize an email attachment.
  *
- * This function unserializes an email attachment that was serialized using
+ * \private
+ *
+ * This function deserializes an email attachment that was serialized using
  * the serialize() function. This is considered an internal function as it
- * is called by the unserialize() function of the email object.
+ * is called by the deserialize() function of the email object.
  *
- * \param[in] r  The reader used to read the input data.
+ * \param[in] in  The input stream with the data to deserialize.
+ * \param[in] is_sub_attachment  Whether it is an attachment or sub-attachment.
  *
  * \sa serialize()
  */
@@ -588,7 +592,7 @@ void attachment::deserialize(snapdev::deserializer<std::stringstream> & in, bool
     if(!in.deserialize(func))
     {
         SNAP_LOG_WARNING
-            << "attachment unserialization stopped early."
+            << "attachment deserialization stopped early."
             << SNAP_LOG_SEND;
     }
 }
@@ -632,7 +636,7 @@ bool attachment::process_hunk(
  * This function serialize an attachment so it can be saved in the database
  * in the form of a string.
  *
- * \param[in,out] w  The writer where the data gets saved.
+ * \param[in,out] out  The output stream where to write the serialized data.
  */
 void attachment::serialize(snapdev::serializer<std::stringstream> & out) const
 {

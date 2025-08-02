@@ -967,9 +967,9 @@ const email::parameter_map_t & email::get_all_parameters() const
 }
 
 
-/** \brief Unserialize an email message.
+/** \brief Deserialize an email message.
  *
- * This function unserializes an email message that was serialized using
+ * This function deserializes an email message that was serialized using
  * the serialize() function.
  *
  * You are expected to first create an email object and then call this
@@ -981,10 +981,10 @@ const email::parameter_map_t & email::get_all_parameters() const
  * is defined in the serialized data then it will be overwritten with
  * that data. Otherwise it will remain the same.
  *
- * The function doesn't return anything. Instead it unserializes the
+ * The function doesn't return anything. Instead it deserializes the
  * \p data directly in this email object.
  *
- * \param[in] data  The serialized email data to transform.
+ * \param[in] in  The serialized email data to transform in a deserializer.
  *
  * \sa serialize()
  */
@@ -998,7 +998,7 @@ void email::deserialize(snapdev::deserializer<std::stringstream> & in)
     if(!in.deserialize(func))
     {
         SNAP_LOG_WARNING
-            << "email unserialization stopped early."
+            << "email deserialization stopped early."
             << SNAP_LOG_SEND;
     }
 }
@@ -1010,8 +1010,8 @@ void email::deserialize(snapdev::deserializer<std::stringstream> & in)
  * the attachment deserialize() as required whenever an attachment
  * is found in the stream.
  *
- * \param[in] name  The name of the tag being read.
- * \param[in] r  The reader used to read the input data.
+ * \param[in] in  The input stream with the serialized data.
+ * \param[in] field  The name of the tag being read.
  */
 bool email::process_hunk(
       snapdev::deserializer<std::stringstream> & in
