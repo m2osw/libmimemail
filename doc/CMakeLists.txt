@@ -22,12 +22,12 @@
 ##
 project(libmimemail-documentation)
 
-find_package(SnapDoxygen QUIET)
-AddDoxygenTarget(libmimemail
+find_package(SnapDoxygen)
+AddDoxygenTarget(
+    libmimemail
     ${LIBMIMEMAIL_VERSION_MAJOR}
     ${LIBMIMEMAIL_VERSION_MINOR}
     ${LIBMIMEMAIL_VERSION_PATCH}
-    QUIET
 )
 
 #install(
