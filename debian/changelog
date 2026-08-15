@@ -1,3 +1,9 @@
+libmimemail (1.0.2.0~noble) noble; urgency=high
+
+  * Fixes to the doxygen setup.
+
+ -- Alexis Wilke <alexis@m2osw.com>  Sat, 15 Aug 2026 13:16:28 -0700
+
 libmimemail (1.0.1.0~noble) noble; urgency=high
 
   * Fixed the name of the package to find in cmake file.
