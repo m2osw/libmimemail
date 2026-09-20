@@ -292,7 +292,7 @@ void attachment::set_content_disposition(
         content_disposition += ' ';
         content_disposition += edhttp::g_name_edhttp_param_filename;
         content_disposition += '=';
-        content_disposition += edhttp::uri::urlencode(basename);
+        content_disposition += edhttp::urlencode(basename);
         content_disposition += ';';
     }
 
